@@ -11,19 +11,27 @@
 }
 
 .main-body {
-  @apply bg-slate-200 w-9/12 mx-auto mt-10 p-10 rounded-lg block grid grid-cols-2 gap-9;
+  @apply bg-white w-9/12 mx-auto mt-10 px-10 py-6 rounded-lg block grid grid-cols-2 gap-9;
 }
 
 .buttons {
   @apply col-span-1;
 }
 
+.buttons-headings {
+  @apply text-lg font-semibold text-slate-600 mb-2;
+}
+
 .bill {
-  @apply bg-slate-200 text-lg mb-11;
+  @apply bg-white text-lg mb-11;
 }
 
 .bill-display {
-  @apply bg-slate-300 mt-3 p-2 h-10 flex justify-between rounded-lg;
+  @apply bg-slate-200 mt-3 p-2 h-10 flex justify-between rounded-lg;
+}
+
+.bill-input {
+  @apply bg-slate-200;
 }
 
 .select-tip {
@@ -35,11 +43,11 @@
 }
 
 .btn-number {
-  @apply bg-emerald-900 w-32 h-14 rounded-lg;
+  @apply font-semibold bg-teal-800 hover:bg-teal-200 hover:text-teal-800 w-32 h-14 rounded-lg transition ease-in duration-300;
 }
 
 .btn-custom {
-  @apply bg-gray-400 w-32 h-14 rounded-lg;
+  @apply font-semibold bg-gray-400 w-32 h-14 rounded-lg;
 }
 
 .display {
@@ -51,5 +59,5 @@
 }
 
 .btn {
-  @apply w-9/12 mx-auto block mt-20 p-3 bg-teal-600 rounded-lg text-white  font-bold;
+  @apply w-9/12 mx-auto block mt-20 p-3 bg-teal-600 hover:bg-teal-200 hover:text-teal-600 rounded-lg text-white  font-bold transition ease-in duration-200;
 }

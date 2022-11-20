@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading {
+  @apply mx-auto mt-11 block w-24;
+}
+
+.title {
+  @apply font-bold text-3xl text-emerald-900 tracking-widest;
+}
+
+.main-body {
+  @apply bg-slate-200 w-9/12 mx-auto mt-10 p-10 rounded-lg block grid grid-cols-2 gap-9;
+}
+
+.buttons {
+  @apply col-span-1;
+}
+
+.bill {
+  @apply bg-slate-200 text-lg mb-11;
+}
+
+.bill-display {
+  @apply bg-slate-300 mt-3 p-2 h-10 flex justify-between rounded-lg;
+}
+
+.select-tip {
+  @apply mb-10;
+}
+
+.tips {
+  @apply text-white;
+}
+
+.btn-number {
+  @apply bg-emerald-900 w-32 h-14 rounded-lg;
+}
+
+.btn-custom {
+  @apply bg-gray-400 w-32 h-14 rounded-lg;
+}
+
+.display {
+  @apply bg-teal-800 p-5 rounded-lg;
+}
+
+.display-section {
+  @apply flex;
+}
+
+.btn {
+  @apply w-9/12 mx-auto block mt-20 p-3 bg-teal-600 rounded-lg text-white  font-bold;
+}

@@ -1,116 +1,41 @@
 "use strict";
 
-console.log("hey");
+const btnNumber = document.querySelectorAll(".number-button");
+console.log(btnNumber);
 
-const cardNumberFront = document.getElementById("card-number");
+const outputDisplay = document.querySelector(".output-display");
 
-const cardNameFront = document.getElementById("card-name");
+//numbers
+const zero = document.getElementById("zero").textContent;
+const one = document.getElementById("one").textContent;
+const two = document.getElementById("two").textContent;
+const three = document.getElementById("three").textContent;
+const four = document.getElementById("four").textContent;
+const five = document.getElementById("five").textContent;
+const six = document.getElementById("six").textContent;
+const seven = document.getElementById("seven").textContent;
+const eight = document.getElementById("eight").textContent;
+const nine = document.getElementById("nine").textContent;
 
-const cardMonthFront = document.querySelector(".card-month");
+//symbols
+const plus = document.getElementById("plus");
+const minus = document.getElementById("minus");
+const divide = document.getElementById("divide");
+const multiply = document.getElementById("multiply");
+const decimalPoint = document.getElementById("decimal-point");
 
-const cardYearFront = document.querySelector(".card-year");
+const reset = document.getElementById("reset");
+const equals = document.getElementById("nine");
 
-const backCVC = document.getElementById("back-cvc");
+console.log(eight);
 
-const inputCardName = document.getElementById("input-card-name");
+btnNumber.forEach(function (i) {
+  i.addEventListener("click", function (e) {
+    e.preventDefault();
 
-const inputCardNumber = document.getElementById("input-card-number");
+    let currentNum = Number(i.textContent);
+    outputDisplay.textContent = currentNum;
 
-const inputMonth = document.getElementById("input-month");
-
-const inputYear = document.getElementById("input-year");
-
-const inputCVC = document.getElementById("input-cvc");
-
-const btn = document.querySelector(".btn");
-
-console.log(cardNumberFront);
-console.log(cardNameFront);
-console.log(backCVC);
-console.log(inputCardName);
-console.log(inputMonth);
-console.log(inputYear);
-console.log(inputCVC);
-console.log(btn);
-console.log(cardMonthFront);
-console.log(cardYearFront);
-
-//CODE
-
-let verification = 0;
-
-btn.addEventListener("click", function () {
-  //CARD NAME
-  if (inputCardName.value.length !== 0) {
-    const cardName = inputCardName.value;
-    cardNameFront.textContent = cardName.toUpperCase();
-    document.querySelector(".number-text").classList.add("hidden");
-    verification++;
-    console.log(verification);
-  } else {
-    console.log("Error");
-    inputCardName.style.outlineColor = "#FE556C";
-  }
-  //CARD NUMBER
-  //Check if input field is blank or contains letters
-  if (inputCardNumber.value.length !== 0 && inputCardNumber.value !== String) {
-    const cardNumber = inputCardNumber.value;
-    cardNumberFront.textContent = cardNumber;
-    inputCardNumber.style.outlineColor = "#9ca3af";
-    verification++;
-    console.log(verification);
-  } else {
-    //Implement red outline
-    console.log("Error");
-    document.querySelector(".number-text").classList.remove("hidden");
-    inputCardNumber.style.outlineColor = "#FE556C";
-  }
-
-  //MONTH
-  if (inputMonth.value.length !== 0) {
-    const cardMonth = inputMonth.value;
-    cardMonthFront.textContent = cardMonth;
-    inputMonth.style.outlineColor = "#9ca3af";
-    document.querySelector(".month-text").classList.add("hidden");
-    verification++;
-    console.log(verification);
-  } else {
-    console.log("Error");
-    document.querySelector(".month-text").classList.remove("hidden");
-    inputMonth.style.outlineColor = "#FE556C";
-  }
-
-  //YEAR
-  if (inputYear.value.length !== 0) {
-    const cardYear = inputYear.value;
-    cardYearFront.textContent = cardYear;
-    inputYear.style.outlineColor = "#9ca3af";
-    verification++;
-    console.log(verification);
-  } else {
-    console.log("Error");
-    document.querySelector(".month-text").classList.remove("hidden");
-    inputYear.style.outlineColor = "#FE556C";
-  }
-
-  //CVC
-  if (inputCVC.value.length !== 0) {
-    const CVC = inputCVC.value;
-    backCVC.textContent = CVC;
-    inputCVC.style.outlineColor = "#9ca3af";
-    verification++;
-    console.log(verification);
-  } else {
-    console.log("Error");
-    document.querySelector(".cvc-text").classList.remove("hidden");
-    inputCVC.style.outlineColor = "#FE556C";
-  }
+    console.log(currentNum);
+  });
 });
-
-// if ((verification = 5)) {
-//   setTimeout(() => {
-//     document.querySelector(".form-section ").classList.add("hidden");
-
-//     document.querySelector(".complete-section").remove("hidden");
-//   }, 5000);
-// }

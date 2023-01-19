@@ -5,82 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/output.css" />
-    <title>Interactive card details form</details></title>
+    <title>Calculator</title>
   </head>
-  <body class="w-screen" style="background: linear-gradient(90deg, #4f0857 30%, #fefefe 30%)">
-    <div class="container">
-      <div class="card-part">
-        <div class="front-card" style="background-image: url('images/bg-card-front.png')">
-          <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
-            <path
-              d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
-              stroke="#fff"
-            />
-          </svg>
-
-          <div class="card-number" id=card-number> 0000 0000 0000 0000
-          </div>
-
-        <div class="flex justify-between mt-5">
-          <div class="card-name capitalize" id="card-name">
-            JANE APPLESEED
-          </div>
-          <div class="card-exp flex" id="card-exp">
-            <p class="card-month">00</p>
-            <p>/</p>
-            <p class="card-year">00</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="back-card" style="background-image: url('images/bg-card-back.png')">
-        <p class="absolute top-24 left-80 ml-11 mt-3" id="back-cvc">000</p>
-      </div>
-    </div>
-
-    <div class="form-section ">
-      <div class="form">
-        <p class="form-headings">cardholder name</p>
-        <input type="text" placeholder="eg. Jane Appleseed" class="card-input mb-5 w-full" id="input-card-name"/>
-
-        <p class="form-headings">card number</p>
-        <input type="number" placeholder="e.g 1234 5678 1234 5678" class="card-input mb-5 w-full" id="input-card-number"/>
-        <p class="number-text hidden">Wrong format,numbers only</p>
-
-        <div class="bottom-section">
-          <div class="exp">
-            <p class="form-headings">exp. date (MM/YY)</p>
-            <div class="flex">
-              <input type="number" placeholder="MM" class="card-input w-20 mr-4" id="input-month"/>
-              <!--<p class="form-text">Can't be blank</p>-->
-              <input type="number" placeholder="YY" class="card-input w-20" id="input-year"/>
+  <body>
+    <main class="container">
+      <!--HEADER-->
+      <header class="header-section">
+        <p class="app-name">calc</p>
+        <div class="theme-section">
+          <p class="theme-text">THEME</p>
+          <!--SLIDER-->
+          <div class="theme-numbers-slider">
+            <div class="theme-numbers">
+              <p class="theme-one">1</p>
+              <p class="theme-two">2</p>
+              <p class="theme-three">3</p>
+            </div>
+            <div class="theme-slider">
+              <div class="slider-dot"></div>
             </div>
           </div>
-
-          <div class="cvc">
-            <p class="form-headings">cvc</p>
-            <input type="number" placeholder="e.g 123" class="card-input w-full" id="input-cvc"/>
-          </div>
-          
-          <p class="month-text hidden">Can't be blank</p>
-          <p class="cvc-text hidden col-start-2">Can't be empty</p>
-          
         </div>
-        <button class="btn">Confirm</button>
-        
-      </div>
-      
-      
-    </div>
+      </header>
 
-    <div class="complete-section hidden">
+      <!--OUTPUT DISPLAY-->
+      <section class="output-display">0</section>
 
-      <svg class="block mx-auto mb-8" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
-      <h1 class="text-3xl font-bold w-48 mx-auto block mb-5">THANK YOU!</h1>
-      <p class="text-slate-400 w-56 mx-auto block">We've added your card details</p>
-      <button class="btn">Continue</button>
-    </div>
+      <!--BUTTON SECTION-->
+      <section class="button-section">
+        <button class="number-button" id="seven">7</button>
+        <button class="number-button" id="eight">8</button>
+        <button class="number-button" id="nine">9</button>
+        <button class="del-button">DEL</button>
+
+        <button class="number-button" id="four">4</button>
+        <button class="number-button" id="five">5</button>
+        <button class="number-button" id="six">6</button>
+        <button class="other-special-buttons" id="plus">+</button>
+
+        <button class="number-button" id="one">1</button>
+        <button class="number-button" id="two">2</button>
+        <button class="number-button" id="three">3</button>
+        <button class="other-special-buttons" id="minus">-</button>
+
+        <button class="other-special-buttons" id="decimal-point">.</button>
+        <button class="number-button" id="zero">0</button>
+        <button class="other-special-buttons" id="divide">/</button>
+        <button class="other-special-buttons" id="multiply">x</button>
+
+        <button class="reset">RESET</button>
+        <button class="equals">=</button>
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
